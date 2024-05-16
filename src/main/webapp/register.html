@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f2f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.registration-container {
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 400px;
+}
+
+.registration-container h2 {
+	margin-bottom: 20px;
+	color: #333;
+	text-align: center;
+}
+
+.registration-container .form-group {
+	margin-bottom: 20px;
+}
+
+.registration-container .form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #555;
+}
+
+.registration-container .form-group input[type="text"],
+	.registration-container .form-group input[type="password"],
+	.registration-container .form-group input[type="email"],
+	.registration-container .form-group input[type="number"],
+	.registration-container .form-group input[type="date"] {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.registration-container button {
+	width: 100%;
+	padding: 12px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.registration-container button:hover {
+	background-color: #0056b3;
+}
+
+.registration-container .login-link {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	color: #007bff;
+	text-decoration: none;
+}
+
+.registration-container .login-link:hover {
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+	<div class="registration-container">
+		<h2>Register</h2>
+		<form action="RegisterServlet" method="POST">
+			<div class="form-group">
+				<label for="first_name">First Name</label> <input type="text"
+					id="first_name" name="first_name" placeholder="First Name" required>
+			</div>
+			<div class="form-group">
+				<label for="last_name">Last Name</label> <input type="text"
+					id="last_name" name="last_name" placeholder="Last Name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label> <input type="email" id="email"
+					name="email" placeholder="Email" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"
+					id="password" name="password" placeholder="Password" required>
+			</div>
+			<div class="form-group">
+				<label for="reg_amt">Registration Amount</label> <input
+					type="number" step="0.01" id="reg_amt" name="reg_amt"
+					placeholder="Registration Amount" required>
+			</div>
+			<div class="form-group">
+				<label for="reg_date">Registration Date</label> <input type="date"
+					id="reg_date" name="reg_date" required>
+			</div>
+			<div class="form-group">
+				<label for="role">Role</label> <input type="text" id="role"
+					name="role" placeholder="Role" required>
+			</div>
+			<button type="submit">Register</button>
+			<a href="login.html" class="login-link">Already have an account?
+				Login here</a>
+		</form>
+	</div>
+
+</body>
+</html>
